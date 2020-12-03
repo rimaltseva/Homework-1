@@ -14,7 +14,8 @@
 		1BB8998A25781ADD00F64147 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BB8998825781ADD00F64147 /* LaunchScreen.storyboard */; };
 		1BB8999525781ADD00F64147 /* HT_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB8999425781ADD00F64147 /* HT_1Tests.swift */; };
 		1BB899A025781ADD00F64147 /* HT_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB8999F25781ADD00F64147 /* HT_1UITests.swift */; };
-		1BB899B42578276E00F64147 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB899B32578276E00F64147 /* TableViewController.swift */; };
+		1BB899CC2578356B00F64147 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB899CB2578356B00F64147 /* ViewController.swift */; };
+		1BB899D1257844C700F64147 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB899D0257844C700F64147 /* People.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +49,8 @@
 		1BB8999B25781ADD00F64147 /* HT 1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HT 1UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BB8999F25781ADD00F64147 /* HT_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HT_1UITests.swift; sourceTree = "<group>"; };
 		1BB899A125781ADD00F64147 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1BB899B32578276E00F64147 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		1BB899CB2578356B00F64147 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1BB899D0257844C700F64147 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +101,12 @@
 		1BB8997C25781ADC00F64147 /* HT 1 */ = {
 			isa = PBXGroup;
 			children = (
-				1BB8997D25781ADC00F64147 /* AppDelegate.swift */,
-				1BB8997F25781ADC00F64147 /* SceneDelegate.swift */,
-				1BB8998325781ADC00F64147 /* Main.storyboard */,
+				1BB899B9257829EE00F64147 /* AppDelegates */,
+				1BB899B8257829D900F64147 /* Storyboards */,
+				1BB899C125782B5E00F64147 /* Model */,
+				1BB899BD25782A0700F64147 /* Controllers */,
 				1BB8998625781ADD00F64147 /* Assets.xcassets */,
-				1BB8998825781ADD00F64147 /* LaunchScreen.storyboard */,
 				1BB8998B25781ADD00F64147 /* Info.plist */,
-				1BB899B32578276E00F64147 /* TableViewController.swift */,
 			);
 			path = "HT 1";
 			sourceTree = "<group>";
@@ -126,6 +127,40 @@
 				1BB899A125781ADD00F64147 /* Info.plist */,
 			);
 			path = "HT 1UITests";
+			sourceTree = "<group>";
+		};
+		1BB899B8257829D900F64147 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1BB8998325781ADC00F64147 /* Main.storyboard */,
+				1BB8998825781ADD00F64147 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		1BB899B9257829EE00F64147 /* AppDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				1BB8997D25781ADC00F64147 /* AppDelegate.swift */,
+				1BB8997F25781ADC00F64147 /* SceneDelegate.swift */,
+			);
+			path = AppDelegates;
+			sourceTree = "<group>";
+		};
+		1BB899BD25782A0700F64147 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1BB899CB2578356B00F64147 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1BB899C125782B5E00F64147 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1BB899D0257844C700F64147 /* People.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +293,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BB899D1257844C700F64147 /* People.swift in Sources */,
 				1BB8997E25781ADC00F64147 /* AppDelegate.swift in Sources */,
-				1BB899B42578276E00F64147 /* TableViewController.swift in Sources */,
 				1BB8998025781ADC00F64147 /* SceneDelegate.swift in Sources */,
+				1BB899CC2578356B00F64147 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
