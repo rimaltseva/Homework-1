@@ -17,7 +17,6 @@ class ViewController: UIViewController {
         People(name: "Name1", gender: "Gender1"),
         People(name: "Name2", gender: "Gender2")
     ])
-    var peopleList2 = [People] ()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +45,8 @@ class ViewController: UIViewController {
                 for object in jsonArray {
                     if let name = object["name"] as? String,
                        let gender = object["gender"] as? String {
-                    self.peopleList2.append(People(name: name, gender: gender))
+                        self.peopleList.removeAll()
+                        self.peopleList.append(People(name: name, gender: gender))
                 }
             }
                 DispatchQueue.main.async {
@@ -71,13 +71,13 @@ class ViewController: UIViewController {
 //MARK:- Table Views Delegate & Data Source
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return peopleList2.count
+        return peopleList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "peopleListCell", for: indexPath)
         
-        let personList = peopleList2[indexPath.row]
+        let personList = peopleList[indexPath.row]
         
         cell.textLabel?.text = personList.name
         cell.detailTextLabel?.text = personList.gender
